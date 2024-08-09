@@ -1,0 +1,129 @@
+using System;
+
+public abstract class Vehiculo
+{
+    public string Marca { get; set; }
+    public string Modelo { get; set; }
+    public int Año { get; set; }
+    public double Kilometraje { get; private set; }
+
+    public Vehiculo(string marca, string modelo, int año, double kilometraje)
+    {
+        Marca = marca;
+        Modelo = modelo;
+        Año = año;
+        Kilometraje = kilometraje;
+    }
+
+    protected void IncrementarKilometraje(double km)
+    {
+        Kilometraje += km;
+    }
+
+    public abstract void Encender();
+    public abstract void Apagar();
+    public abstract void Conducir(double km);
+}
+
+public class Auto : Vehiculo
+{
+    public int NumeroDePuertas { get; set; }
+
+    public Auto(string marca, string modelo, int año, double kilometraje, int numeroDePuertas)
+        : base(marca, modelo, año, kilometraje)
+    {
+        NumeroDePuertas = numeroDePuertas;
+    }
+
+    public override void Encender()
+    {
+        Console.WriteLine($"{Marca} {Modelo} esta encendido.");
+    }
+
+    public override void Apagar()
+    {
+        Console.WriteLine($"{Marca} {Modelo} esta apagado.");
+    }
+
+    public override void Conducir(double km)
+    {
+        IncrementarKilometraje(km);
+        Console.WriteLine($"Conduciendo {Marca} {Modelo} por {km} km.");
+    }
+}
+
+public class Motocicleta : Vehiculo
+{
+    public string TipoDeMoto { get; set; }
+
+    public Motocicleta(string marca, string modelo, int año, double kilometraje, string tipoDeMoto)
+        : base(marca, modelo, año, kilometraje)
+    {
+        TipoDeMoto = tipoDeMoto;
+    }
+
+    public override void Encender()
+    {
+        Console.WriteLine($"{Marca} {Modelo} esta encendido.");
+    }
+
+    public override void Apagar()
+    {
+        Console.WriteLine($"{Marca} {Modelo} esta apagado.");
+    }
+
+    public override void Conducir(double km)
+    {
+        IncrementarKilometraje(km);
+        Console.WriteLine($"Conduciendo {Marca} {Modelo} por {km} km.");
+    }
+}
+
+public class Camion : Vehiculo
+{
+    public double CapacidadDeCarga { get; set; }
+
+    public Camion(string marca, string modelo, int año, double kilometraje, double capacidadDeCarga)
+        : base(marca, modelo, año, kilometraje)
+    {
+        CapacidadDeCarga = capacidadDeCarga;
+    }
+
+    public override void Encender()
+    {
+        Console.WriteLine($"{Marca} {Modelo} esta encendido.");
+    }
+
+    public override void Apagar()
+    {
+        Console.WriteLine($"{Marca} {Modelo} esta apagado.");
+    }
+
+    public override void Conducir(double km)
+    {
+        IncrementarKilometraje(km);
+        Console.WriteLine($"Conduciendo {Marca} {Modelo} por {km} km.");
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Auto miAuto = new Auto("Honda", "Civic", 2020, 15000, 4);
+        Motocicleta miMoto = new Motocicleta("Camaro", "SS 2014", 2022, 5000, "Deportiva");
+        Camion miCamion = new Camion("Audi", "R8", 2019, 100000, 25000);
+
+        miAuto.Encender();
+        miAuto.Conducir(100);
+        miAuto.Apagar();
+
+        miMoto.Encender();
+        miMoto.Conducir(50);
+        miMoto.Apagar();
+
+        miCamion.Encender();
+        miCamion.Conducir(200);
+        miCamion.Apagar();
+    }
+}
