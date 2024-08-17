@@ -1,0 +1,181 @@
+//Form1.Designer.cs*
+
+namespace RegistroContactosApp
+{
+    partial class Form1
+    {
+        private System.ComponentModel.IContainer components = null;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private void InitializeComponent()
+        {
+            this.EtiquetaNombre = new System.Windows.Forms.Label();
+            this.EtiquetaTeléfono = new System.Windows.Forms.Label();
+            this.EtiquetaEmail = new System.Windows.Forms.Label();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.textBoxTelefono = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.buttonLimpiar = new System.Windows.Forms.Button();
+            this.buttonAgregar = new System.Windows.Forms.Button();
+            this.listBoxContactos = new System.Windows.Forms.ListBox();
+            this.LabelEstado = new System.Windows.Forms.StatusStrip();
+            this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.LabelEstado.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // EtiquetaNombre
+            // 
+            this.EtiquetaNombre.AutoSize = true;
+            this.EtiquetaNombre.Location = new System.Drawing.Point(16, 33);
+            this.EtiquetaNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.EtiquetaNombre.Name = "EtiquetaNombre";
+            this.EtiquetaNombre.Size = new System.Drawing.Size(56, 16);
+            this.EtiquetaNombre.TabIndex = 0;
+            this.EtiquetaNombre.Text = "Nombre";
+            // 
+            // EtiquetaTeléfono
+            // 
+            this.EtiquetaTeléfono.AutoSize = true;
+            this.EtiquetaTeléfono.Location = new System.Drawing.Point(16, 94);
+            this.EtiquetaTeléfono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.EtiquetaTeléfono.Name = "EtiquetaTeléfono";
+            this.EtiquetaTeléfono.Size = new System.Drawing.Size(61, 16);
+            this.EtiquetaTeléfono.TabIndex = 1;
+            this.EtiquetaTeléfono.Text = "Teléfono";
+            // 
+            // EtiquetaEmail
+            // 
+            this.EtiquetaEmail.AutoSize = true;
+            this.EtiquetaEmail.Location = new System.Drawing.Point(16, 161);
+            this.EtiquetaEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.EtiquetaEmail.Name = "EtiquetaEmail";
+            this.EtiquetaEmail.Size = new System.Drawing.Size(118, 16);
+            this.EtiquetaEmail.TabIndex = 2;
+            this.EtiquetaEmail.Text = "Correo Electrónico";
+            // 
+            // textBoxNombre
+            // 
+            this.textBoxNombre.Location = new System.Drawing.Point(140, 25);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(371, 22);
+            this.textBoxNombre.TabIndex = 3;
+            // 
+            // textBoxTelefono
+            // 
+            this.textBoxTelefono.Location = new System.Drawing.Point(140, 85);
+            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTelefono.Name = "textBoxTelefono";
+            this.textBoxTelefono.Size = new System.Drawing.Size(371, 22);
+            this.textBoxTelefono.TabIndex = 4;
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Location = new System.Drawing.Point(140, 153);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(371, 22);
+            this.textBoxEmail.TabIndex = 5;
+            // 
+            // buttonLimpiar
+            // 
+            this.buttonLimpiar.BackColor = System.Drawing.Color.Orange;
+            this.buttonLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLimpiar.Location = new System.Drawing.Point(356, 213);
+            this.buttonLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonLimpiar.Name = "buttonLimpiar";
+            this.buttonLimpiar.Size = new System.Drawing.Size(156, 71);
+            this.buttonLimpiar.TabIndex = 6;
+            this.buttonLimpiar.Text = "Limpiar Campos";
+            this.buttonLimpiar.UseVisualStyleBackColor = false;
+            this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
+            // 
+            // buttonAgregar
+            // 
+            this.buttonAgregar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAgregar.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonAgregar.Location = new System.Drawing.Point(140, 213);
+            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAgregar.Name = "buttonAgregar";
+            this.buttonAgregar.Size = new System.Drawing.Size(156, 71);
+            this.buttonAgregar.TabIndex = 7;
+            this.buttonAgregar.Text = "Agregar Contacto";
+            this.buttonAgregar.UseVisualStyleBackColor = false;
+            this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
+            // 
+            // listBoxContactos
+            // 
+            this.listBoxContactos.FormattingEnabled = true;
+            this.listBoxContactos.ItemHeight = 16;
+            this.listBoxContactos.Location = new System.Drawing.Point(612, 27);
+            this.listBoxContactos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxContactos.Name = "listBoxContactos";
+            this.listBoxContactos.Size = new System.Drawing.Size(253, 244);
+            this.listBoxContactos.TabIndex = 8;
+            // 
+            // LabelEstado
+            // 
+            this.LabelEstado.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.LabelEstado.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusLabel});
+            this.LabelEstado.Location = new System.Drawing.Point(0, 528);
+            this.LabelEstado.Name = "LabelEstado";
+            this.LabelEstado.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.LabelEstado.Size = new System.Drawing.Size(1067, 26);
+            this.LabelEstado.TabIndex = 9;
+            this.LabelEstado.Text = "Barra de estado";
+            // 
+            // statusLabel
+            // 
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(198, 20);
+            this.statusLabel.Text = "Listo para agregar contactos";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.LabelEstado);
+            this.Controls.Add(this.listBoxContactos);
+            this.Controls.Add(this.buttonAgregar);
+            this.Controls.Add(this.buttonLimpiar);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.textBoxTelefono);
+            this.Controls.Add(this.textBoxNombre);
+            this.Controls.Add(this.EtiquetaEmail);
+            this.Controls.Add(this.EtiquetaTeléfono);
+            this.Controls.Add(this.EtiquetaNombre);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "Form1";
+            this.Text = "Registro de Contactos";
+            this.LabelEstado.ResumeLayout(false);
+            this.LabelEstado.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        private System.Windows.Forms.Label EtiquetaNombre;
+        private System.Windows.Forms.Label EtiquetaTeléfono;
+        private System.Windows.Forms.Label EtiquetaEmail;
+        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.TextBox textBoxTelefono;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.Button buttonLimpiar;
+        private System.Windows.Forms.Button buttonAgregar;
+        private System.Windows.Forms.ListBox listBoxContactos;
+        private System.Windows.Forms.StatusStrip LabelEstado;
+        private System.Windows.Forms.ToolStripStatusLabel statusLabel;
+    }
+}
