@@ -179,3 +179,52 @@ namespace RegistroContactosApp
         private System.Windows.Forms.ToolStripStatusLabel statusLabel;
     }
 }
+
+//Form1.cs* 
+
+using System;
+using System.Windows.Forms;
+
+namespace RegistroContactosApp
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void buttonAgregar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBoxNombre.Text) ||
+                string.IsNullOrEmpty(textBoxTelefono.Text) ||
+                string.IsNullOrEmpty(textBoxEmail.Text))
+            {
+                LabelEstado.Items[0].Text = "Por favor, complete todos los campos.";
+            }
+            else
+            {
+                string contacto = $"{textBoxNombre.Text} - {textBoxTelefono.Text} - {textBoxEmail.Text}";
+                listBoxContactos.Items.Add(contacto);
+
+                LabelEstado.Items[0].Text = "Contacto agregado con éxito.";
+
+                LimpiarCampos();
+            }
+        }
+
+        private void buttonLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            LabelEstado.Items[0].Text = "Campos limpios.";
+        }
+
+        private void LimpiarCampos()
+        {
+            textBoxNombre.Text = string.Empty;
+            textBoxTelefono.Text = string.Empty;
+            textBoxEmail.Text = string.Empty;
+        }
+    }
+}
+
